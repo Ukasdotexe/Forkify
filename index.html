@@ -66,11 +66,11 @@
             >
           </button>
         </div>
-        <!-- <button class="bg-blue-400 self-stretch">button 2</button> -->
       </header>
 
+      <!-- Left Side -->
       <section
-        class="col-span-1 flex flex-col justify-between py-6 bg-white rounded-l-lg h-[1000px]"
+        class="col-span-1 flex flex-col justify-between py-6 bg-white rounded-l-lg"
       >
         <!-- recipes list -->
         <div class="">
@@ -111,16 +111,16 @@
         </div>
 
         <!-- Copyright claim -->
-        <div class="text-color-grey-dark-2 text-xs">
+        <p class="text-color-grey-dark-2 text-xs px-10">
           © Copyright by <span class="underline">Ukas</span> . Use for learning
           or your portfolio. Don't use to teach. Don't claim as your own.
-        </div>
+        </p>
       </section>
 
       <section class="col-span-1">
         <div>
-          <div class="w-full h-80">
-            <img class="w-full h-full" src="src/img/Pizza2.jpeg" alt="" />
+          <div class="w-full h-auto">
+            <img class="w-full h-full" src="src/img/pizza-3.jpg" alt="" />
 
             <div class="text-center bg-red-400f mb-5">
               <span
@@ -130,7 +130,7 @@
             </div>
 
             <div
-              class="flex items-center justify-between px-[94px] bg-blue-400 mb-4"
+              class="flex items-center justify-between px-[94px] bg-blfue-400"
             >
               <div class="flex items-center">
                 <div class="flex items-center gap-3 mr-16">
@@ -179,16 +179,104 @@
               </div>
             </div>
             <!-- Recipe Ingrediants -->
+            <div class="bg-[#EEECEA] py-10 my-10">
+              <h2
+                class="text-color-primary uppercase text-center text-3xl mb-10"
+              >
+                Recipe Ingrediants
+              </h2>
+
+              <div class="grid grid-cols-2 gap-y-8 pl-20">
+                <div class="flex gap-2">
+                  <svg class="w-6 h-6 fill-color-primary">
+                    <use href="/src/img/icons.svg#icon-check"></use>
+                  </svg>
+                  <span class="text-color-grey-dark-1"
+                    >2 cups of uncooked egg noodles</span
+                  >
+                </div>
+                <div class="flex gap-2">
+                  <svg class="w-6 h-6 fill-color-primary">
+                    <use href="/src/img/icons.svg#icon-check"></use>
+                  </svg>
+                  <span class="text-color-grey-dark-1">1 onion chopped</span>
+                </div>
+                <div class="flex gap-2">
+                  <svg class="w-6 h-6 fill-color-primary">
+                    <use href="/src/img/icons.svg#icon-check"></use>
+                  </svg>
+                  <span class="text-color-grey-dark-1"
+                    >1 green bell pepper chopped</span
+                  >
+                </div>
+                <div class="flex gap-2">
+                  <svg class="w-6 h-6 fill-color-primary">
+                    <use href="/src/img/icons.svg#icon-check"></use>
+                  </svg>
+                  <span class="text-color-grey-dark-1">16 oz pizza sauce</span>
+                </div>
+                <div class="flex gap-2">
+                  <svg class="w-6 h-6 fill-color-primary">
+                    <use href="/src/img/icons.svg#icon-check"></use>
+                  </svg>
+                  <span class="text-color-grey-dark-1"
+                    >1 cup shredded mozzarella cheese
+                  </span>
+                </div>
+                <div class="flex gap-2">
+                  <svg class="w-6 h-6 fill-color-primary">
+                    <use href="/src/img/icons.svg#icon-check"></use>
+                  </svg>
+                  <span class="text-color-grey-dark-1"
+                    >1/2 pound lean ground beef
+                  </span>
+                </div>
+                <div class="flex gap-2">
+                  <svg class="w-6 h-6 fill-color-primary">
+                    <use href="/src/img/icons.svg#icon-check"></use>
+                  </svg>
+                  <span class="text-color-grey-dark-1"
+                    >2 cloves garlic minced
+                  </span>
+                </div>
+                <div class="flex gap-2">
+                  <svg class="w-6 h-6 fill-color-primary">
+                    <use href="/src/img/icons.svg#icon-check"></use>
+                  </svg>
+                  <span class="text-color-grey-dark-1"
+                    >1 sliced pepperoni sausage
+                  </span>
+                </div>
+                <div class="flex gap-2">
+                  <svg class="w-6 h-6 fill-color-primary">
+                    <use href="/src/img/icons.svg#icon-check"></use>
+                  </svg>
+                  <span class="text-color-grey-dark-1">4 tbsps milk </span>
+                </div>
+              </div>
+            </div>
+
+            <h2 class="text-color-primary uppercase text-center text-3xl">
+              HOW TO COOK
+            </h2>
+            <p class="text-color-grey-dark-2 text-center my-10">
+              This recipe was carefully designed and testedby
+              <span class="text-color-grey-dark-1">All Recipes</span>.Please
+              check out <br />
+              directions at their websites.
+            </p>
+            <div class="flex justify-center mb-10">
+              <button
+                class="bg-gradient flex gap-2 items-center rounded-full py-4 px-10 transition-all delay-100 hover:scale-105"
+              >
+                <span class="text-white uppercase font-bold">DIRECTIONS</span>
+                <svg class="fill-white w-6 h-6">
+                  <use href="/src/img/icons.svg#icon-arrow-right "></use>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
-        <!-- <div class="flex gap-3 py-12 px-10 max-w-[400px] mx-auto">
-          <svg class="fill:color-primary w-6 h-6">
-            <use href="/src/img/icons.svg#icon-edit "></use>
-          </svg>
-          <span class="text-xl text-color-grey-dark-1"
-            >Start by searching for a recipe or an ingredient. Have fun!</span
-          >
-        </div> -->
       </section>
     </main>
   </body>
