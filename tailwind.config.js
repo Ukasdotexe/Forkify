@@ -3,11 +3,17 @@ module.exports = {
   content: ['index.html'],
   theme: {
     extend: {
+      screens: {
+        xl: '1250px', // Overrides the default xl breakpoint
+      },
+      boxShadow: {
+        custom: '0 0.7rem 3rem rgba(97, 85, 81, 0.08)', // Custom shadow
+      },
       fontFamily: {
         nunito: 'Nunito Sans',
       },
       backgroundImage: {
-        gradient: 'linear-gradient(to right bottom,#f38e82, #fbdb89)',
+        gradient: 'linear-gradient(to right bottom,#fbdb89 , #f38e82)',
       },
       colors: {
         'color-primary': '#f38e82',

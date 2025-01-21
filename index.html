@@ -18,5 +18,56 @@
       rel="stylesheet"
     />
   </head>
-  <body></body>
+  <body class="bg-gradient">
+    <main
+      class="grid grid-cols-[380px,1fr] grid-rows-[96px,1fr] w-full [1200px] bg-color-grey-light-1 rounded-lg xl:w-[1200px] xl:my-12 xl:mx-auto"
+    >
+      <header class="col-span-full flex items-center justify-between">
+        <div class="w-36 bg-rfed-400 ml-10">
+          <img class="w-full" src="/src/img/logo.png" alt="logo" />
+        </div>
+        <form
+          class="bg-white flex items-center pl-10 rounded-l-full rounded-r-full focus-within:-translate-y-[2px] focus-within:shadow-custom"
+        >
+          <input
+            placeholder="Search over 1.000.000 recipes..."
+            class="w-[300px] placeholder:color-grey-light-3 outline-none text-color-grey-dark-1"
+            type="text"
+          />
+
+          <button
+            class="bg-gradient flex gap-2 items-center rounded-full py-4 px-10 transition-all delay-100 hover:scale-105"
+          >
+            <svg class="fill-white w-6 h-6">
+              <use href="/src/img/icons.svg#icon-search "></use>
+            </svg>
+            <span class="text-white uppercase font-bold">Search</span>
+          </button>
+        </form>
+        <div class="flex group self-stretch mr-10">
+          <button
+            class="bg-yelflow-400 flex items-center justify-center gap-2 px-4 transition-all delay-100 hover:bg-color-grey-light-2"
+          >
+            <svg class="fill-gradient w-6 h-6">
+              <use href="/src/img/icons.svg#icon-edit "></use>
+            </svg>
+            <span class="text-color-grey-dark-1 uppercase font-semibold"
+              >ADD RECIPE</span
+            >
+          </button>
+          <button
+            class="bg-yellowdf-400 flex items-center justify-center gap-2 px-4 transition-all delay-100 hover:bg-color-grey-light-2"
+          >
+            <svg class="fill-gradient w-6 h-6">
+              <use href="/src/img/icons.svg#icon-bookmark "></use>
+            </svg>
+            <span class="text-color-grey-dark-1 uppercase font-semibold"
+              >BOOKMARKS</span
+            >
+          </button>
+        </div>
+        <!-- <button class="bg-blue-400 self-stretch">button 2</button> -->
+      </header>
+    </main>
+  </body>
 </html>
