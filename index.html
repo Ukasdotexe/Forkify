@@ -48,7 +48,7 @@
           <button
             class="bg-yelflow-400 flex items-center justify-center gap-2 px-4 transition-all delay-100 hover:bg-color-grey-light-2"
           >
-            <svg class="fill-gradient w-6 h-6">
+            <svg class="fill-color-primary w-6 h-6">
               <use href="/src/img/icons.svg#icon-edit "></use>
             </svg>
             <span class="text-color-grey-dark-1 uppercase font-semibold"
@@ -58,7 +58,7 @@
           <button
             class="bg-yellowdf-400 flex items-center justify-center gap-2 px-4 transition-all delay-100 hover:bg-color-grey-light-2"
           >
-            <svg class="fill-gradient w-6 h-6">
+            <svg class="fill-color-primary w-6 h-6">
               <use href="/src/img/icons.svg#icon-bookmark "></use>
             </svg>
             <span class="text-color-grey-dark-1 uppercase font-semibold"
@@ -68,6 +68,128 @@
         </div>
         <!-- <button class="bg-blue-400 self-stretch">button 2</button> -->
       </header>
+
+      <section
+        class="col-span-1 flex flex-col justify-between py-6 bg-white rounded-l-lg h-[1000px]"
+      >
+        <!-- recipes list -->
+        <div class="">
+          <!-- recipe card -->
+          <div
+            class="flex items-center gap-3 py-5 pl-10 cursor-pointer transition-all delay-75 ease-in-out hover:bg-color-grey-light-2 hover:-translate-y-1"
+          >
+            <div class="w-16 h-16 rounded-full">
+              <img
+                class="w-full h-full rounded-full"
+                src="/src/img/pizza2.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="text-color-primary text-lg">JS PIZZA</span>
+              <span class="text-color-grey-dark-1 uppercase"
+                >My Pizza Recipe</span
+              >
+            </div>
+          </div>
+          <!-- recipe card -->
+          <div
+            class="flex items-center gap-3 py-5 pl-10 cursor-pointer transition-all delay-75 ease-in-out hover:bg-color-grey-light-2 hover:-translate-y-1"
+          >
+            <div class="w-16 h-16 rounded-full">
+              <img
+                class="w-full h-full rounded-full"
+                src="/src/img/Pizza.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="text-color-primary text-lg">HOT PIZZA</span>
+              <span class="text-color-grey-dark-1 uppercase">ALL RECIPES</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright claim -->
+        <div class="text-color-grey-dark-2 text-xs">
+          © Copyright by <span class="underline">Ukas</span> . Use for learning
+          or your portfolio. Don't use to teach. Don't claim as your own.
+        </div>
+      </section>
+
+      <section class="col-span-1">
+        <div>
+          <div class="w-full h-80">
+            <img class="w-full h-full" src="src/img/Pizza2.jpeg" alt="" />
+
+            <div class="text-center bg-red-400f mb-5">
+              <span
+                class="inline-block bg-gradient text-white text-5xl py-2 px-5 -translate-y-1/2 -skew-y-6"
+                >HOT PIZZA</span
+              >
+            </div>
+
+            <div
+              class="flex items-center justify-between px-[94px] bg-blue-400 mb-4"
+            >
+              <div class="flex items-center">
+                <div class="flex items-center gap-3 mr-16">
+                  <svg class="w-6 h-6 fill-color-primary">
+                    <use href="src/img/icons.svg#icon-clock"></use>
+                  </svg>
+                  <div>
+                    <span class="font-medium">45</span>
+                    <span class="text-color-grey-dark-1"> MINUTES</span>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-3 mr-5">
+                  <svg class="w-6 h-6 fill-color-primary">
+                    <use href="src/img/icons.svg#icon-users"></use>
+                  </svg>
+                  <div>
+                    <span class="font-medium">4</span>
+                    <span class="text-color-grey-dark-1"> SERVINGS</span>
+                  </div>
+                </div>
+
+                <div class="flex gap-1">
+                  <!-- - -->
+                  <div
+                    class="flex items-center justify-center w-5 h-5 rounded-full border-[1px] border-color-primary cursor-pointer"
+                  >
+                    <span class="text-color-primary text-lg">-</span>
+                  </div>
+
+                  <!-- + -->
+
+                  <div
+                    class="flex items-center justify-center w-5 h-5 rounded-full border-[1px] border-color-primary cursor-pointer"
+                  >
+                    <span class="text-color-primary text-lg">+</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="group flex items-center justify-center w-10 h-10 rounded-full bg-gradient cursor-pointer"
+              >
+                <svg class="fill-white w-6 h-6">
+                  <use href="/src/img/icons.svg#icon-bookmark"></use>
+                </svg>
+              </div>
+            </div>
+            <!-- Recipe Ingrediants -->
+          </div>
+        </div>
+        <!-- <div class="flex gap-3 py-12 px-10 max-w-[400px] mx-auto">
+          <svg class="fill:color-primary w-6 h-6">
+            <use href="/src/img/icons.svg#icon-edit "></use>
+          </svg>
+          <span class="text-xl text-color-grey-dark-1"
+            >Start by searching for a recipe or an ingredient. Have fun!</span
+          >
+        </div> -->
+      </section>
     </main>
   </body>
 </html>
