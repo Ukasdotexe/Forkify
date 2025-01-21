@@ -69,11 +69,12 @@
       </header>
 
       <!-- Left Side -->
+
       <section
         class="col-span-1 flex flex-col justify-between py-6 bg-white rounded-l-lg"
       >
         <!-- recipes list -->
-        <div class="">
+        <div>
           <!-- recipe card -->
           <div
             class="flex items-center gap-3 py-5 pl-10 cursor-pointer transition-all delay-75 ease-in-out hover:bg-color-grey-light-2 hover:-translate-y-1"
@@ -117,10 +118,16 @@
         </p>
       </section>
 
+      <!-- Right Side -->
+
       <section class="col-span-1">
         <div>
           <div class="w-full h-auto">
-            <img class="w-full h-full" src="src/img/pizza-3.jpg" alt="" />
+            <img
+              class="w-full h-full brightness-95"
+              src="src/img/pizza-3.jpg"
+              alt=""
+            />
 
             <div class="text-center bg-red-400f mb-5">
               <span
@@ -129,9 +136,7 @@
               >
             </div>
 
-            <div
-              class="flex items-center justify-between px-[94px] bg-blfue-400"
-            >
+            <div class="flex items-center justify-between px-[94px]">
               <div class="flex items-center">
                 <div class="flex items-center gap-3 mr-16">
                   <svg class="w-6 h-6 fill-color-primary">
@@ -155,19 +160,14 @@
 
                 <div class="flex gap-1">
                   <!-- - -->
-                  <div
-                    class="flex items-center justify-center w-5 h-5 rounded-full border-[1px] border-color-primary cursor-pointer"
-                  >
-                    <span class="text-color-primary text-lg">-</span>
-                  </div>
+                  <svg class="w-6 h-6 fill-color-primary cursor-pointer">
+                    <use href="src/img/icons.svg#icon-minus-circle"></use>
+                  </svg>
 
                   <!-- + -->
-
-                  <div
-                    class="flex items-center justify-center w-5 h-5 rounded-full border-[1px] border-color-primary cursor-pointer"
-                  >
-                    <span class="text-color-primary text-lg">+</span>
-                  </div>
+                  <svg class="w-6 h-6 fill-color-primary cursor-pointer">
+                    <use href="src/img/icons.svg#icon-plus-circle"></use>
+                  </svg>
                 </div>
               </div>
               <div
@@ -178,12 +178,12 @@
                 </svg>
               </div>
             </div>
-            <!-- Recipe Ingrediants -->
+            <!-- Recipe Ingredients -->
             <div class="bg-[#EEECEA] py-10 my-10">
               <h2
                 class="text-color-primary uppercase text-center text-3xl mb-10"
               >
-                Recipe Ingrediants
+                Recipe Ingredients
               </h2>
 
               <div class="grid grid-cols-2 gap-y-8 pl-20">
@@ -220,38 +220,38 @@
                     <use href="/src/img/icons.svg#icon-check"></use>
                   </svg>
                   <span class="text-color-grey-dark-1"
-                    >1 cup shredded mozzarella cheese
-                  </span>
+                    >1 cup shredded mozzarella cheese</span
+                  >
                 </div>
                 <div class="flex gap-2">
                   <svg class="w-6 h-6 fill-color-primary">
                     <use href="/src/img/icons.svg#icon-check"></use>
                   </svg>
                   <span class="text-color-grey-dark-1"
-                    >1/2 pound lean ground beef
-                  </span>
+                    >1/2 pound lean ground beef</span
+                  >
                 </div>
                 <div class="flex gap-2">
                   <svg class="w-6 h-6 fill-color-primary">
                     <use href="/src/img/icons.svg#icon-check"></use>
                   </svg>
                   <span class="text-color-grey-dark-1"
-                    >2 cloves garlic minced
-                  </span>
+                    >2 cloves garlic minced</span
+                  >
                 </div>
                 <div class="flex gap-2">
                   <svg class="w-6 h-6 fill-color-primary">
                     <use href="/src/img/icons.svg#icon-check"></use>
                   </svg>
                   <span class="text-color-grey-dark-1"
-                    >1 sliced pepperoni sausage
-                  </span>
+                    >1 sliced pepperoni sausage</span
+                  >
                 </div>
                 <div class="flex gap-2">
                   <svg class="w-6 h-6 fill-color-primary">
                     <use href="/src/img/icons.svg#icon-check"></use>
                   </svg>
-                  <span class="text-color-grey-dark-1">4 tbsps milk </span>
+                  <span class="text-color-grey-dark-1">4 tbsps milk</span>
                 </div>
               </div>
             </div>
@@ -260,8 +260,8 @@
               HOW TO COOK
             </h2>
             <p class="text-color-grey-dark-2 text-center my-10">
-              This recipe was carefully designed and testedby
-              <span class="text-color-grey-dark-1">All Recipes</span>.Please
+              This recipe was carefully designed and tested by
+              <span class="text-color-grey-dark-1">All Recipes</span>. Please
               check out <br />
               directions at their websites.
             </p>
@@ -271,7 +271,7 @@
               >
                 <span class="text-white uppercase font-bold">DIRECTIONS</span>
                 <svg class="fill-white w-6 h-6">
-                  <use href="/src/img/icons.svg#icon-arrow-right "></use>
+                  <use href="/src/img/icons.svg#icon-arrow-right"></use>
                 </svg>
               </button>
             </div>
@@ -279,5 +279,150 @@
         </div>
       </section>
     </main>
+
+    <section
+      class="hidden relative p-12 bg-white w-[1000px] mx-auto rounded-md mb-7 shadow-lg"
+    >
+      <div class="flex justify-between mb-10">
+        <!-- <h2 class="uppercase font-bold text-3xl text-color-grey-dark-1 mb-5">
+          RECIPE DATA
+        </h2> -->
+
+        <form class="grid grid-cols-[100px,300px] gap-3">
+          <h2
+            class="col-span-full uppercase font-bold text-2xl text-color-grey-dark-1 mb-5"
+          >
+            RECIPE DATA
+          </h2>
+
+          <!-- <div class="flex items-center gap-x-24"> -->
+          <label class="text-color-grey-dark-1 font-semibold">Title</label>
+          <input
+            class="px-2.5 py-1 border-[2px] rounded-md outline-none text-color-grey-dark-1"
+            type="text"
+          />
+          <!-- </div> -->
+          <!-- <div class="flex items-center gap-x-24"> -->
+          <label class="text-color-grey-dark-1 font-semibold">URL</label>
+          <input
+            class="px-2.5 py-1 border-[2px] rounded-md outline-none text-color-grey-dark-1"
+            type="text"
+          />
+          <!-- </div> -->
+          <!-- <div class="flex items-center gap-x-24"> -->
+          <label class="text-color-grey-dark-1 font-semibold"
+            >Imagine URL
+          </label>
+          <input
+            class="px-2.5 py-1 border-[2px] rounded-md outline-none text-color-grey-dark-1"
+            type="text"
+          />
+          <!-- </div> -->
+          <!-- <div class="flex items-center gap-x-24"> -->
+          <label class="text-color-grey-dark-1 font-semibold">Publisher</label>
+          <input
+            class="px-2.5 py-1 border-[2px] rounded-md outline-none text-color-grey-dark-1"
+            type="text"
+          />
+
+          <label class="text-color-grey-dark-1 font-semibold">Prep time</label>
+          <input
+            class="px-2 border-[2px] rounded-md outline-none text-color-grey-dark-1"
+            type="text"
+          />
+
+          <label class="text-color-grey-dark-1 font-semibold">Servings</label>
+          <input
+            class="px-2.5 py-1 border-[2px] rounded-md outline-none text-color-grey-dark-1"
+            type="text"
+          />
+          <!-- </div> -->
+        </form>
+
+        <form class="grid grid-cols-[100px,300px] gap-3">
+          <h2
+            class="col-span-full uppercase font-bold text-2xl text-color-grey-dark-1 mb-5"
+          >
+            INGREDIANTS
+          </h2>
+
+          <!-- <div class="flex items-center gap-x-24"> -->
+          <label class="text-color-grey-dark-1 font-semibold"
+            >Ingrediant 1</label
+          >
+          <input
+            placeholder="Format : 'Quantity, Unit, Description'"
+            class="px-2.5 py-1 border-[2px] rounded-md outline-none text-color-grey-dark-1"
+            type="text"
+          />
+          <!-- </div> -->
+          <!-- <div class="flex items-center gap-x-24"> -->
+          <label class="text-color-grey-dark-1 font-semibold"
+            >Ingrediant 2</label
+          >
+          <input
+            placeholder="Format : 'Quantity, Unit, Description'"
+            class="px-2.5 py-1 border-[2px] rounded-md outline-none text-color-grey-dark-1"
+            type="text"
+          />
+          <!-- </div> -->
+          <!-- <div class="flex items-center gap-x-24"> -->
+          <label class="text-color-grey-dark-1 font-semibold"
+            >Ingrediant 3
+          </label>
+          <input
+            placeholder="Format : 'Quantity, Unit, Description'"
+            class="px-2.5 py-1 border-[2px] rounded-md outline-none text-color-grey-dark-1"
+            type="text"
+          />
+          <!-- </div> -->
+          <!-- <div class="flex items-center gap-x-24"> -->
+          <label class="text-color-grey-dark-1 font-semibold"
+            >Ingrediant 4</label
+          >
+          <input
+            placeholder="Format : 'Quantity, Unit, Description'"
+            class="px-2.5 py-1 border-[2px] rounded-md outline-none text-color-grey-dark-1"
+            type="text"
+          />
+
+          <label class="text-color-grey-dark-1 font-semibold"
+            >Ingrediant 5</label
+          >
+          <input
+            placeholder="Format : 'Quantity, Unit, Description'"
+            class="px-2.5 py-1 border-[2px] rounded-md outline-none text-color-grey-dark-1"
+            type="text"
+          />
+
+          <label class="text-color-grey-dark-1 font-semibold"
+            >Ingrediant 6</label
+          >
+          <input
+            placeholder="Format : 'Quantity, Unit, Description'"
+            class="px-2.5 py-1 border-[2px] rounded-md outline-none text-color-grey-dark-1"
+            type="text"
+          />
+          <!-- </div> -->
+        </form>
+
+        <div
+          class="absolute right-5 top-0 text-color-grey-dark-1 text-5xl cursor-pointer"
+        >
+          x
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <button
+          class="bg-gradient flex gap-2 items-center rounded-full py-4 px-10 transition-all delay-100 hover:scale-105"
+        >
+          <svg class="fill-white w-6 h-6">
+            <use href="/src/img/icons.svg#icon-upload-cloud"></use>
+          </svg>
+
+          <span class="text-white uppercase font-bold">UPLOAD</span>
+        </button>
+      </div>
+    </section>
   </body>
 </html>
