@@ -78,7 +78,7 @@ class RecipeView {
         </div>
 
         <div
-          class="group flex items-center justify-center w-10 h-10 rounded-full bg-gradient cursor-pointer"
+          class="flex items-center justify-center w-10 h-10 rounded-full bg-gradient cursor-pointer "
         >
           <svg class="fill-white w-6 h-6">
             <use href="/${icons}#icon-bookmark"></use>
