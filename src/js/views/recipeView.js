@@ -5,68 +5,27 @@
 
 import icons from 'url:../../img/icons.svg';
 import { Fraction } from 'fractional';
-class RecipeView {
-  #parentElement = document.querySelector('.recipe');
-  #data;
-  #errorMessage = 'We could not find that recipe. Please try another one !';
-  #successMessage = '';
+import View from './View';
 
-  renderSpinner() {
-    const markup = ` 
-    <div class="flex justify-center  my-12 text-center">
-      <svg class="w-16 h-16 fill-color-primary animate-rotate">
-        <use href="${icons}#icon-loader"></use>
-      </svg>
-    </div>
-    `;
+class RecipeView extends View {
+  _parentElement = document.querySelector('.recipe');
+  // _data;
+  _errorMessage = 'We could not find that recipe. Please try another one !';
+  _successMessage = '';
 
-    this.#clear();
-    this.#parentElement.insertAdjacentHTML('afterbegin', markup);
-  }
-
-  renderError(message = this.#errorMessage) {
-    const markup = `
-    <div class="flex max-w-[400px] mx-auto my-0 py-[50px] px-10 ">
-    <svg class="w-12 h-12 -translate-y-[3px] fill-color-primary">
-      <use href="${icons}#icon-alert-triangle"></use>
-    </svg>
-    <p class="ml-6 text-lg font-medium">${message} </p>
-    `;
-
-    this.#clear();
-    this.#parentElement.insertAdjacentHTML('afterbegin', markup);
-  }
-
-  renderSuccess(message = this.#successMessage) {
-    const markup = `
-    <div class="max-w-[400px] flex gap-x-5 mx-auto p-5">
-      <svg class="w-8 h-8 fill-color-primary">
-        <use href="${icons}#icon-smile"></use>
-      </svg>
-
-      <p class="text-color-grey-dark-1 text-lg font-medium">
-        ${message}
-      </p>
-    </div>
-    `;
-
-    this.#clear();
-    this.#parentElement.insertAdjacentHTML('afterbegin', markup);
-  }
-
-  #generateMarkUp() {
+  _generateMarkUp() {
     return ` <div>
     <div class="w-full h-auto">
       <img
         class="w-full h-[300px] brightness-95"
-        src="${this.#data.imageUrl}"
-        alt="${this.#data.title}"
+        src="${this._data.imageUrl}"
+        alt="${this._data.title}"
       />
 
       <div class="text-center mb-5">
         <span
           class="inline-block bg-gradient text-white text-5xl py-2 px-5 -translate-y-1/2 -skew-y-6"
-          >${this.#data.title}</span
+          >${this._data.title}</span
         >
       </div>
 
@@ -77,7 +36,7 @@ class RecipeView {
               <use href="${icons}#icon-clock"></use>
             </svg>
             <div>
-              <span class="font-medium">${this.#data.cookingTime}</span>
+              <span class="font-medium">${this._data.cookingTime}</span>
               <span class="text-color-grey-dark-1"> MINUTES</span>
             </div>
           </div>
@@ -87,7 +46,7 @@ class RecipeView {
               <use href="${icons}#icon-users"></use>
             </svg>
             <div>
-              <span class="font-medium">${this.#data.servings}</span>
+              <span class="font-medium">${this._data.servings}</span>
               <span class="text-color-grey-dark-1"> SERVINGS</span>
             </div>
           </div>
@@ -123,7 +82,7 @@ class RecipeView {
 
         <ul class="grid grid-cols-2 gap-y-8 ">
 
-        ${this.#data.ingredients.map(this.#generateMarkupIngredient).join('')}
+        ${this._data.ingredients.map(this._generateMarkupIngredient).join('')}
         
         </ul>
       </div>
@@ -134,7 +93,7 @@ class RecipeView {
       <p class="text-color-grey-dark-2 text-center my-10">
         This recipe was carefully designed and tested by
         <span class="text-color-grey-dark-1">${
-          this.#data.publisher
+          this._data.publisher
         }</span>. Please
         check out <br />
         directions at their websites.
@@ -142,7 +101,7 @@ class RecipeView {
       <div class="flex justify-center mb-10">
         <a 
         target="_blank"
-        href="${this.#data.sourceUrl}"
+        href="${this._data.sourceUrl}"
           class="bg-gradient flex gap-2 items-center rounded-full py-4 px-10 transition-all delay-100 hover:scale-105"
         >
           <span class="text-white uppercase font-bold">DIRECTIONS</span>
@@ -155,7 +114,7 @@ class RecipeView {
         </div> `;
   }
 
-  #generateMarkupIngredient(ing) {
+  _generateMarkupIngredient(ing) {
     return `
       <li class="flex  text-color-grey-dark-1 font-semi-bold gap-4 bg-red-500">
         <div>
@@ -178,18 +137,9 @@ class RecipeView {
     `;
   }
 
-  #clear() {
-    this.#parentElement.innerHTML = '';
-  }
-
-  render(data) {
-    this.#data = data;
-
-    let markup = this.#generateMarkUp();
-
-    this.#clear();
-    this.#parentElement.insertAdjacentHTML('afterbegin', markup);
-  }
+  // _clear() {
+  //   this._parentElement.innerHTML = '';
+  // }
 
   addHandlerRender(handler) {
     ['hashchange', 'load'].forEach(ev => window.addEventListener(ev, handler));
